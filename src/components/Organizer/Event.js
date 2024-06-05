@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Swal from "sweetalert2";
-
+import {useNavigate} from "react";
 const Event = () => {
   const [formData, setFormData] = useState({
     eventName: "",

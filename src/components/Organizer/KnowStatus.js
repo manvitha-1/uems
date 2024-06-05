@@ -83,7 +83,7 @@ const KnowStatus = () => {
                 <div className="container-fluid mt-2">
                     <div className="card">
                         <div className="card-body">
-                            <p className="card-text"><strong>Title: </strong>{eventDetails.eventName}</p>
+                            <p className="card-text"><strong>Title: </strong>{eventDetails.name}</p>
                             <p className="card-text"><strong>Description:</strong> {eventDetails.description}</p>
                             <p className="card-text"><strong>Date:</strong> {eventDetails.date.split('T')[0]}</p>
                             <p className="card-text"><strong>Time In:</strong> {eventDetails.timeIn}</p>

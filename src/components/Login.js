@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import Home from "./Home";
 import "./Login.css";
 import Swal from 'sweetalert2';
+import { useAuth } from './AuthContext';
 
 const Login = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [formData, setFormData] = useState({ username: "", password: "", role: "" });
 
   const handleChange = (e) => {
@@ -28,6 +30,7 @@ const Login = () => {
       const data = await response.json();
       if (data.valid === true) {
         Swal.fire('SUCCESS', 'Logged in Successfully', 'success');
+        login(formData.role);
         if (formData.role === "event_organizer" && data.role === "event_organizer") {
           navigate("/eo"); 
         } else if (formData.role === "admin" && data.role === "admin") {

@@ -4,9 +4,7 @@ import Header from "./Header";
 const List = () => {
     const [events, setEvents] = useState([]);
 
-    useEffect(() => {
-        fetchEvents();
-    }, []);
+    useEffect(() => {fetchEvents();}, []);
 
     const fetchEvents = async () => {
         try {
@@ -87,7 +85,7 @@ const List = () => {
             console.error("Error:", error);
         }
     };
-
+ 
     return (
         <div>
             <Header />

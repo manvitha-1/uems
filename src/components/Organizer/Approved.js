@@ -13,6 +13,7 @@ const Approved = () => {
             const response = await fetch("http://localhost:5000/events/approved");
             if (response.ok) {
                 const data = await response.json();
+                console.table(data);
                 setApprovedEvents(data);
             } else {
                 console.error("Failed to fetch approved events");
@@ -31,7 +32,7 @@ const Approved = () => {
                         <div key={event._id} className="col-md-12 mb-3">
                             <div className="card">
                                 <div className="card-body">
-                                    <p className="card-text"><strong>Name:</strong> {event.eventName}</p>
+                                    <p className="card-text"><strong>Name:</strong> {event.name}</p>
                                     <p className="card-text"><strong>Participants:</strong> {event.participants}</p>
                                     <p className="card-text"><strong>Description:</strong> {event.description}</p>
                                     <p className="card-text"><strong>Date:</strong> {event.date.split('T')[0]}</p>
