@@ -100,6 +100,9 @@ const eventSchema = new mongoose.Schema({
 
 
 const Event = mongoose.model('Event', eventSchema);
+app.get('/',(req,res)=>{
+    res.send("Hello Manvitha!!")
+})
 
 app.post("/events", async (req, res) => {
     try {
