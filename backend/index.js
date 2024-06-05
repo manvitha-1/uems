@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect("mongodb+srv://manvitha_m:umes%401234@cluster0.bvfldq6.mongodb.net/umes1", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
