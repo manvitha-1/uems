@@ -8,7 +8,7 @@ const KnowStatus = () => {
 
     const handleSearch = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/events/search?searchTerm=${searchTerm}`);
+            const response = await fetch(`https://uems-topaz.vercel.app/events/search?searchTerm=${searchTerm}`);
             if (response.ok) {
                 const data = await response.json();
                 if (data.length > 0) {

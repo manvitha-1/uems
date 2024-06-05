@@ -7,7 +7,7 @@ const Reports = () => {
   useEffect(() => {
     const fetchApprovedEvents = async () => {
       try {
-        const response = await fetch("http://localhost:5000/events/approved");
+        const response = await fetch("https://uems-topaz.vercel.app/events/approved");
         if (response.ok) {
           const data = await response.json();
           setApprovedEvents(data);

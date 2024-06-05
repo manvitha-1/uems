@@ -10,7 +10,7 @@ const Approved = () => {
 
     const fetchdeclinedEvents = async () => {
         try {
-            const response = await fetch("http://localhost:5000/events/declined");
+            const response = await fetch("https://uems-topaz.vercel.app/events/declined");
             if (response.ok) {
                 const data = await response.json();
                 setdeclinedEvents(data);

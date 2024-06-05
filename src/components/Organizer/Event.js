@@ -25,7 +25,7 @@ const Event = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try { 
-      const response = await fetch("http://localhost:5000/events", {
+      const response = await fetch("https://uems-topaz.vercel.app/events", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

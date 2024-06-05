@@ -8,7 +8,7 @@ const List = () => {
 
     const fetchEvents = async () => {
         try {
-            const response = await fetch("http://localhost:5000/events");
+            const response = await fetch("https://uems-topaz.vercel.app/events");
             if (response.ok) {
                 const data = await response.json();
                 // Filter out the events that are already approved or declined
@@ -34,7 +34,7 @@ const List = () => {
 
     const approveEvent = async (eventId) => {
         try {
-            const response = await fetch(`http://localhost:5000/events/${eventId}/approve`, {
+            const response = await fetch(`https://uems-topaz.vercel.app/events/${eventId}/approve`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const List = () => {
 
     const declineEvent = async (eventId) => {
         try {
-            const response = await fetch(`http://localhost:5000/events/${eventId}/decline`, {
+            const response = await fetch(`https://uems-topaz.vercel.app/events/${eventId}/decline`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
