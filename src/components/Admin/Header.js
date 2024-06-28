@@ -21,6 +21,9 @@ const Header = () => {
                     <Link to="/admin/reports" className="nav-link mr-5" style={brandStyle}>Reports</Link>
                     </li>
                     <li className="nav-item">
+                    <Link to="/admin/create" className="nav-link mr-5" style={brandStyle}>Create User</Link>
+                    </li>
+                    <li className="nav-item">
                         <Link to="/login" className="nav-link">
                             <button className='btn btn-primary'>Logout</button>
                         </Link>

@@ -28,6 +28,8 @@ const Login = () => {
         body: JSON.stringify(formData)
       });
       const data = await response.json();
+      console.log(data)
+      localStorage.setItem('token',data.token);
       if (data.valid === true) {
         Swal.fire('SUCCESS', 'Logged in Successfully', 'success');
         login(formData.role);

@@ -11,6 +11,7 @@ import Declined from './components/Organizer/Declined';
 import KnowStatus from './components/Organizer/KnowStatus';
 import List from './components/Admin/List';
 import Reports from './components/Admin/Reports';
+import CreateUser from './components/Admin/CreateUser';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           {/* Admin routes */}
           <Route path="/admin" element={<PrivateRoute role="admin"><List /></PrivateRoute>} />
           <Route path="/admin/reports" element={<PrivateRoute role="admin"><Reports /></PrivateRoute>} />
+          <Route path="/admin/create" element={<PrivateRoute role="admin"><CreateUser /></PrivateRoute>} />
         </Routes>
       </Router>
     </AuthProvider>
