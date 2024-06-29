@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let response = await fetch("https://uems-topaz.vercel.app/login", {
+      let response = await fetch("https://uems-topaz.vercel.app//login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -28,7 +28,6 @@ const Login = () => {
         body: JSON.stringify(formData)
       });
       const data = await response.json();
-      console.log(data)
       localStorage.setItem('token',data.token);
       if (data.valid === true) {
         Swal.fire('SUCCESS', 'Logged in Successfully', 'success');
