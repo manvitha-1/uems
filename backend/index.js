@@ -249,7 +249,7 @@ const User = mongoose.model('User', userSchema);
 const createToken = (user) => {
     return jwt.sign(
         { id: user._id, username: user.username, role: user.role },
-        process.env.JWT_SECRET,
+        89076534,
         { expiresIn: '1h' }
     );
 };
@@ -259,7 +259,7 @@ const verifyToken = (req, res, next) => {
     if (!token) return res.status(403).json({ message: "Token is required" });
 
     try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, 89076534);
         req.user = decoded;
         next();
     } catch (error) {
