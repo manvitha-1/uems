@@ -32,7 +32,7 @@ const Login = () => {
       localStorage.setItem('token',data.token);
       if (data.valid === true) {
         Swal.fire('SUCCESS', 'Logged in Successfully', 'success');
-        login(formData.role);
+        login(formData.role); 
         if (formData.role === "event_organizer" && data.role === "event_organizer") {
           navigate("/eo"); 
         } else if (formData.role === "admin" && data.role === "admin") {
